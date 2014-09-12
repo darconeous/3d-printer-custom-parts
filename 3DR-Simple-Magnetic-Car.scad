@@ -5,8 +5,8 @@ module OldCarriage() {
 	import("/Users/darco/Projects/3DR-Simple-Delta-Printer/STL/Carriage for LM8UU.STL");
 }
 
-//RodType = "magnetic";
-RodType = "traxxas";
+RodType = "magnetic";
+//RodType = "traxxas";
 
 TraxxasNutHeight = 6.96;
 TraxxasOffset = TraxxasNutHeight/2;
