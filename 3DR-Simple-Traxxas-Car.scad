@@ -28,11 +28,14 @@ Blah = 8;
 BearingDialation = 0.175;
 
 SnapOutHeight = 0.2;
-HalfRodDistance = 45/2;
+RodDistance = 45;
 LinearBearingDiameter = 15;
 
 SmoothRadius = 5;
 TraxxasHeight = 6;
+
+
+HalfRodDistance = RodDistance/2;
 
 //%OldCarriage();
 
