@@ -27,7 +27,36 @@ difference()
 {
 translate([-42,-13.75,0])
 import("../3DR-Simple-Delta-Printer/STL/Simple Parts/3DR Bottom Motor Mount Simple.STL",convexity=4);
-TSlot(height=80, size=20, expand=0.5);
+union() {
+	TSlot(height=80, size=20, expand=0.5);
+	hull() {
+		rotate([0,45,0])cube([14.3,10,14.3],center=true);
+		translate([0,0,8])rotate([0,45,0])cube([14.3,10,14.3],center=true);
+	}
+
+	hull() {
+	hull() {
+		rotate([0,45,0])cube([14.3,0.1,14.3],center=true);
+		translate([0,0,6])rotate([0,45,0])cube([14.3,0.1,14.3],center=true);
+	}
+	translate([0,-4.75,0])
+	hull() {
+		rotate([0,45,0])cube([14.3,0.1,14.3],center=true);
+		translate([0,0,15])rotate([0,45,0])cube([14.3,0.1,14.3],center=true);
+	}
+	}
+	hull() {
+	hull() {
+		rotate([0,45,0])cube([14.3,0.1,14.3],center=true);
+		translate([0,0,6])rotate([0,45,0])cube([14.3,0.1,14.3],center=true);
+	}
+	translate([0,4.75,0])
+	hull() {
+		rotate([0,45,0])cube([14.3,0.1,14.3],center=true);
+		translate([0,0,15])rotate([0,45,0])cube([14.3,0.1,14.3],center=true);
+	}
+	}
+}
 }
 
 
