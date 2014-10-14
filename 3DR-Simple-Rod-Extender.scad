@@ -22,6 +22,22 @@ BodyHeight = max(ExtendRodLength,RodInset+2.5);
 }
 */
 
+module TSlot(height=5, size=20, expand=0.5) {
+	difference() {
+		cube_center([size+expand,size+expand,height]);
+		for(deg = [0,90,180,270]) rotate([0,0,deg]) {
+			translate([size/4+size/8,0,-0.05])
+			cube_center([size/4,size/4,height+0.1],center_x=false);
+			translate([size/4,0,-0.05])
+			cube_center([size/8+0.1,size/2,height+0.1],center_x=false);
+		}
+	}
+	for(deg = [0,90]) rotate([0,0,deg+45]) {
+		translate([0,0,-0.05])
+		cube_center([size,size/8,height+0.1]);
+	}
+}
+
 module cube_center(size,center_x=true,center_y=true) {
 	translate([center_x?-size.x/2:0,center_y?-size.y/2:0,0])cube(size);
 }

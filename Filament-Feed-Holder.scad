@@ -2,7 +2,7 @@
 
 
 $fn=16;
-
+Angle=60;
 
 module Mount() {
 	difference() {
@@ -20,7 +20,10 @@ difference() {
 	cylinder(h=20, d1=5,d2=2.5,center=true);
 	translate([0,0,8])cylinder(h=20, d=9.75);
 
-	translate([22,10,0])rotate([0,-45,180])cube([20,20,20]);
+	translate([22,10,0])rotate([0,-Angle,180])cube([20,20,20]);
 }
 
-translate([20,22,0])rotate([0,-45,180])Mount();
+difference() {
+	translate([20,22,-2.5])rotate([0,-Angle,180])Mount();
+	translate([0,0,-5])cube([100,100,10],center=true);
+}

@@ -20,13 +20,15 @@ module TSlot(height=5, size=20, expand=0.5) {
 }
 
 
+translate([-42,-13.75,0])
 difference()
 {
-import("../3DR-Simple-Delta-Printer/STL/Top/3DR Bottom Motor Mount.STL");
+import("../3DR-Simple-Delta-Printer/STL/Top/3DR Bottom Motor Mount.STL",convexity=3);
 translate([42,13.75,0])
 TSlot(height=80, size=20, expand=0.5);
 }
 
+translate([-42,-13.75,0])
 //color("red")
 translate([59,45,0.2]) difference() {
 	cube([18,4,20.9]);
@@ -34,6 +36,7 @@ translate([59,45,0.2]) difference() {
 	translate([5.5,0,13.4])rotate([90,0,0])cylinder(h=10, d=8, center=true, $fn=32);
 }
 
+translate([-42,-13.75,0])
 translate([53,20,14]) {
 	cube([6.5,7,10.1]);
 	translate([-29,0,0])cube([6.5,7,10.1]);

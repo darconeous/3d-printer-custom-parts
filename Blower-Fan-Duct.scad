@@ -7,11 +7,11 @@ module FanDuct() {
 	module Shape(dia) {
 		hull() {
 			cube([15.2+dia*2,20+dia*2,3],center=true);
-			translate([0,-5,25])cylinder(h=0.1,d=10+dia*2);
+			translate([0,-5,23])rotate([-30,0,0])cylinder(h=0.1,d=10+dia*2);
 		}
 		hull() {
-			translate([0,-5,25])cylinder(h=0.1,d=10+dia*2);
-			translate([0,-5,45])rotate([30,0,0])scale([1.0,0.5,1])cylinder(h=0.5-dia/12,d=7+dia*3);
+			translate([0,-5,23])rotate([-30,0,0])cylinder(h=0.1,d=10+dia*2);
+			translate([0,-5,44])rotate([45,0,0])scale([1.0,0.5,1])cylinder(h=0.85-dia/12,d=7+dia*3);
 		}
 	}
 
